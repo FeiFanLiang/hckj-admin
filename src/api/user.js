@@ -2,15 +2,23 @@ import request from '@/utils/request'
 
 export function login(data) {
   return request({
-    url: '/vue-admin-template/user/login',
+    url: '/api/login',
     method: 'post',
+    data
+  })
+}
+
+export const updatePasswordApi = (data) => {
+  return request({
+    url:"/api/updatePassword",
+    method:"post",
     data
   })
 }
 
 export function getInfo(token) {
   return request({
-    url: '/vue-admin-template/user/info',
+    url: '/vue-element-admin/user/info',
     method: 'get',
     params: { token }
   })
@@ -18,7 +26,7 @@ export function getInfo(token) {
 
 export function logout() {
   return request({
-    url: '/vue-admin-template/user/logout',
-    method: 'post'
+    url: '/api/logout',
+    method: 'get'
   })
 }

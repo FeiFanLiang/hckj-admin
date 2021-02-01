@@ -9,3 +9,11 @@ export default {
   name: 'App'
 }
 </script>
+<style lang="scss">
+.table-box {
+  padding: 10px;
+}
+.pagintion {
+  text-align: center;
+}
+</style>
